@@ -199,7 +199,7 @@ const PROJECTS = [
 
 const CONTACT_EMAIL = 'salmanjan3009584@gmail.com';
 const SOCIAL_LINKS = {
-  github: 'https://github.com/',
+  github: 'https://github.com/Ahmadjan618',
   linkedin: 'https://www.linkedin.com/',
 };
 
