@@ -743,7 +743,7 @@ const App = () => {
                       />
                     </Tilt>
                     <p className="text-lg md:text-2xl text-[var(--text-muted)] font-light leading-relaxed">
-                      Hi, I'm <strong className="text-[var(--text-strong)] font-medium">Salman Ahmad</strong>. I engineer high-performance Flutter mobile apps and AI-assisted web experiences that redefine digital interaction.
+                      Hi, I'm <strong className="text-[var(--text-strong)] font-medium">Salman Ahmad</strong>, a Flutter developer in Peshawar, Pakistan. I engineer high-performance Flutter mobile apps and AI-assisted web experiences that redefine digital interaction.
                     </p>
                   </div>
                 </Reveal>
@@ -1025,8 +1025,8 @@ const App = () => {
                           </div>
                           <div className="min-w-0">
                             <p className="text-xs uppercase tracking-widest text-[var(--text-soft)]">Availability</p>
-                            <p className="text-base sm:text-lg font-semibold text-[var(--text-strong)]">Remote - Worldwide</p>
-                            <p className="text-sm text-[var(--text-muted)]">Flexible across time zones.</p>
+                            <p className="text-base sm:text-lg font-semibold text-[var(--text-strong)]">Peshawar, Pakistan (Remote)</p>
+                            <p className="text-sm text-[var(--text-muted)]">Remote-friendly across time zones.</p>
                           </div>
                         </div>
                       </div>
