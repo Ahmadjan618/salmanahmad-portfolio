@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Premium Dark Background with subtle border -->
+  <rect width="512" height="512" rx="120" fill="#030303" stroke="#27272a" stroke-width="12"/>
+  
+  <!-- "SA." Logo Text -->
+  <text x="256" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="260" font-weight="900" text-anchor="middle" letter-spacing="-15">
+    <tspan fill="#ffffff">S</tspan>
+    <tspan fill="#8b5cf6">A</tspan>
+    <tspan fill="#ffffff">.</tspan>
+  </text>
+</svg>

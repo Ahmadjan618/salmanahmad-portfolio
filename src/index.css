@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 1rem)); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #030303;
+  --bg-alt: #0b0b0f;
+  --panel: rgba(24, 24, 27, 0.6);
+  --panel-strong: rgba(9, 9, 11, 0.9);
+  --text: #d4d4d8;
+  --text-strong: #ffffff;
+  --text-muted: #a1a1aa;
+  --text-soft: #71717a;
+  --border: rgba(255, 255, 255, 0.12);
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --button-bg: #ffffff;
+  --button-text: #030303;
+  --button-bg-ghost: rgba(255, 255, 255, 0.06);
+  --shadow: rgba(0, 0, 0, 0.5);
+  --glow: rgba(255, 255, 255, 0.35);
+  --cursor-dot: #ffffff;
+  --cursor-ring: rgba(255, 255, 255, 0.35);
+  --marquee-stroke: rgba(255, 255, 255, 0.12);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f6fb;
+  --bg-alt: #eef2f7;
+  --panel: #ffffff;
+  --panel-strong: #ffffff;
+  --text: #111827;
+  --text-strong: #0b1220;
+  --text-muted: #3f4b5c;
+  --text-soft: #5b6b7f;
+  --border: rgba(15, 23, 42, 0.16);
+  --border-soft: rgba(15, 23, 42, 0.1);
+  --button-bg: #0f172a;
+  --button-text: #f8fafc;
+  --button-bg-ghost: rgba(15, 23, 42, 0.08);
+  --shadow: rgba(15, 23, 42, 0.12);
+  --glow: rgba(15, 23, 42, 0.18);
+  --cursor-dot: #0f172a;
+  --cursor-ring: rgba(15, 23, 42, 0.2);
+  --marquee-stroke: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.35s ease, color 0.35s ease;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+#root {
+  overflow-x: clip;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-glow {
+  mix-blend-mode: screen;
+}
+
+:root[data-theme="light"] .theme-glow {
+  mix-blend-mode: normal;
+  opacity: 0.18;
+}
+
+.theme-cursor {
+  mix-blend-mode: difference;
+}
+
+:root[data-theme="light"] .theme-cursor {
+  mix-blend-mode: multiply;
+}
+
+.animate-float {
+  animation: float 4.5s ease-in-out infinite;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.cursor-off * {
+    cursor: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee {
+    animation: none !important;
+  }
+
+  .animate-float {
+    animation: none !important;
+  }
+
+  body.cursor-off * {
+    cursor: auto !important;
+  }
+}
+
